@@ -9,7 +9,8 @@ export const authOptions: NextAuthOptions = {
       id: "worldcoin",
       name: "Worldcoin",
       type: "oauth",
-      wellKnown: "https://id.worldcoin.org/.well-known/openid-configuration",
+      wellKnown:
+        "https://staging.id.worldcoin.org/.well-known/openid-configuration",
       authorization: { params: { scope: "openid" } },
       clientId: process.env.WLD_CLIENT_ID,
       clientSecret: process.env.WLD_CLIENT_SECRET,
@@ -20,7 +21,7 @@ export const authOptions: NextAuthOptions = {
           id: profile.sub,
           name: profile.sub,
           verificationLevel:
-            profile["https://id.worldcoin.org/v1"].verification_level,
+            profile["https://staging.id.worldcoin.org/v1"].verification_level,
         };
       },
     },
