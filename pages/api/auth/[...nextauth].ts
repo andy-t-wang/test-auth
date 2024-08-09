@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
           id: profile.sub,
           name: profile.sub,
           verificationLevel:
-            profile["https://staging.id.worldcoin.org/v1"].verification_level,
+            profile["https://id.worldcoin.org/v1"].verification_level,
         };
       },
     },
